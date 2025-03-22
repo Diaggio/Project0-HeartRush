@@ -701,24 +701,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5522063727655563455, guid: 0c98f994f7df1f849858fd2d6de9b731, type: 3}
   m_PrefabInstance: {fileID: 683342427}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &657635150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657635146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e4270c639af490890c28ebf45461b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runner: {fileID: 0}
-  heartRate: 60
-  minSpeed: 5
-  maxSpeed: 20
-  minHR: 60
-  maxHR: 160
 --- !u!114 &657635151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,9 +816,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2919116957122212826, guid: 0c98f994f7df1f849858fd2d6de9b731, type: 3}
       insertIndex: -1
       addedObject: {fileID: 657635151}
-    - targetCorrespondingSourceObject: {fileID: 2919116957122212826, guid: 0c98f994f7df1f849858fd2d6de9b731, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 657635150}
   m_SourcePrefab: {fileID: 100100000, guid: 0c98f994f7df1f849858fd2d6de9b731, type: 3}
 --- !u!1 &692654303
 GameObject:
