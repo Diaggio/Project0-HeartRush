@@ -12,6 +12,6 @@ public class FollowPlayer : MonoBehaviour
     {
         Vector3 targetPosition = cameraTarget.position + offset;
         transform.position= Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-        transform.LookAt(cameraTarget);
+        //transform.LookAt(cameraTarget);
     }
 }

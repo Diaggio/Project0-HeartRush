@@ -22,11 +22,22 @@ public class HeartRateSpeedController : MonoBehaviour
     }
 
     void Update()
-    {
-        if(heartRateSource.currentHeartRate >= 65){
-            laneRunner.followSpeed = 15f;
-        }else{
-            laneRunner.followSpeed=5f;
+        {
+            float bpm = heartRateSource.currentHeartRate;
+
+        if (bpm <= 80f)
+        {
+            laneRunner.followSpeed = 5f;
+        }
+        else if (bpm > 80f && bpm <= 120f)
+        {
+            // Linear increase from 5 to 10 between 80 and 120
+            float t = (bpm - 80f) / 40f; // t goes from 0 to 1
+            laneRunner.followSpeed = Mathf.Lerp(5f, 10f, t);
+        }
+        else
+        {
+            laneRunner.followSpeed = 10f;
         }
     }
 }
