@@ -15,19 +15,18 @@ public class HeartRateSpeedController : MonoBehaviour
     public float minSpeed = 5f;
     public float maxSpeed = 20f;
 
+    void Start()
+    {
+        // Auto-link the LaneRunner on this GameObject
+        laneRunner = GetComponent<LaneRunner>();
+    }
+
     void Update()
     {
-        if (heartRateSource == null || laneRunner == null) return;
-
-        float hr = heartRateSource.currentHeartRate;
-
-        // Clamp HR just in case
-        hr = Mathf.Clamp(hr, minHeartRate, maxHeartRate);
-
-        // Normalize HR to 0–1
-        float t = Mathf.InverseLerp(minHeartRate, maxHeartRate, hr);
-
-        // Convert to speed
-        laneRunner.followSpeed = Mathf.Lerp(minSpeed, maxSpeed, t);
+        if(heartRateSource.currentHeartRate >= 65){
+            laneRunner.followSpeed = 15f;
+        }else{
+            laneRunner.followSpeed=5f;
+        }
     }
 }
